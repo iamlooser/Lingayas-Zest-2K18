@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block login-active %} active {% endblock %}
+
+{% block head %}
+
+    <style media="screen">
+        .form-body{
+
+            background-image: url({% static 'login_background.jpg' %});
+            background-position: center;
+            background-size: cover;
+            height: 500px;
+            display: block;
+
+            text-align: center;
+        }
+        .form-part{
+            display: inline-block;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.44);
+            height: 300px;
+
+            text-align: center;
+            width: 300px;
+            margin-top: 10%;
+            color: black;
+
+        }
+        .form-part form button{
+            background-color: black;
+            width: 250px;
+            color: white;
+            height: 50px;
+            border-radius: 20px;
+        }
+        .form-part img{
+            width: 100px;
+            margin: 0;
+            padding: 0;
+            margin-top: -50px;
+            margin-left: -50px;
+            position: absolute;
+        }
+    </style>
+
+{% endblock %}
+
+
+<!============================================================>
+{% block body %}
+
+        <div class="form-body">
+            <div class="form-part">
+                <img src="{% static 'LoginLogo.png' %}" alt="">
+                <form method="post"><br><br><br>
+                  {% csrf_token %}
+                  {{ form.as_p }}<br>
+                  <button type="submit">Login</button>
+                </form>
+            </div>
+
+
+        </div>
+
+
+  {% endblock %}

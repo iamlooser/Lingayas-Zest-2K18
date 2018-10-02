@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Registration Info {% endblock %}
+
+{% block reg_info-active %} active {% endblock %}
+
+
+{% block body %}
+
+
+
+
+
+
+
+
+<div class="event-schedule-section event-schedule-section-one section pt-120 pb-120">
+    <div class="container">
+
+        <!-- Section Title Style One -->
+        <div class="row">
+            <div class="section-title-one text-center col pb-150">
+                <h1>Register Colleges List</h1>
+                <p> Zest 2k18 </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <!-- Event One Tab List Start -->
+
+            <!-- Event One Tab Content Start -->
+            <div class="event-one-schedule-tab-content tab-content col-12">
+
+                <!-- Event One Tab Pane Start -->
+                <div class="event-one-schedule-tab-pane tab-pane fade show active" id="event-one-day-one">
+
+
+                    <!-- Event One List Start-->
+                    <ul class="event-one-schedule-list">
+
+
+{%  for info_data in data %}
+                        <!-- Event One Single Event Start-->
+                        <li class="event-one-single-schedule">
+
+                                        <!-- Day & Time -->
+                                        <div class="day-time float-left" style=" width: 350px;">
+                                            <h5 style=" color: rgba(0, 134, 149, 0.68) ">Collage Name</h5>
+                                            <h4>{{ info_data.College_Name }}</h4>
+                                        </div>
+
+                                        <!-- Category & Title -->
+                                        <div class="category-title float-left" style=" width: 300px;">
+                                            <h5 style=" color: rgba(0, 134, 149, 0.68) "><a href="##">{{ info_data.Email }}</a></h5>
+                                            <h4><a href="#">{{ info_data.Contact }}</a></h4>
+                                        </div>
+
+                                        <!-- Organizer -->
+                                        <div class="organizer float-left">
+                                            <h5 style=" color: rgba(0, 134, 149, 0.68) ">Number of Participants</h5>
+                                            <h4><a href="#">{{ info_data.Number_of_Participants }}</a></h4>
+                                        </div>
+
+                                        <div class="organizer float-left">
+                                            <h5 style=" color: rgba(0, 134, 149, 0.68) ">Address</h5>
+                                            <h4>{{ info_data.Address }}</h4>
+                                        </div>
+
+                        </li><!-- Event One Single Event End-->
+
+{% endfor %}
+
+
+
+
+
+                    </ul><!-- Event One List End-->
+
+                </div><!-- Event One Tab Pane End -->
+
+            </div><!-- Event One Tab Content End -->
+
+        </div>
+
+    </div>
+</div><!-- Event Schedule Section End -->
+
+
+
+
+ {% endblock %}

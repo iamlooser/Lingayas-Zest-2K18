@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<htmllang="en">
+
+<head>
+
+
+{% load static %}
+    <title> {% block title %}  Lingaya's Zest 2K18  {% endblock %}  </title>
+
+    <style type="text/css">
+    .dismissButton{
+        background-color:#fff;
+        border:1px solid #dadce0;
+        color:#1a73e8;
+        border-radius:4px;
+        font-family:Roboto,sans-serif;
+        font-size:14px;
+        height:36px;
+        cursor:pointer;
+        padding:0 24px
+        }
+        .dismissButton:hover{
+            background-color:rgba(66,133,244,0.04);
+            border:1px solid #d2e3fc;
+            }
+            .dismissButton:focus{
+                background-color:rgba(66,133,244,0.12);
+                border:1px solid #d2e3fc;outline:0;
+                }
+                .dismissButton:hover:focus{
+                    background-color:rgba(66,133,244,0.16);
+                    border:1px solid #d2e2fd;
+                    }
+                    .dismissButton:active{
+                        background-color:rgba(66,133,244,0.16);
+                        border:1px solid #d2e2fd;
+                        box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)
+                        }
+                        .dismissButton:disabled{
+                            background-color:#fff;border:1px solid #f1f3f4;
+                            color:#3c4043;
+                        }
+</style>
+
+<style>
+    .gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{
+        font-weight:400
+    }
+</style>
+
+<style>
+    .gm-control-active img{
+        box-sizing:content-box;
+        pointer-events:none
+        }
+        .gm-control-active:hover img:nth-child(1),.gm-control-active:active img:nth-child(1),.gm-control-active:active img:nth-child(2){
+            display:none
+        }
+</style>
+
+
+<link type="text/css" rel="stylesheet" href="{% static 'Home_files/css' %}">
+
+<style type="text/css">
+    .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{
+        font-size:10px;
+        box-sizing:border-box
+    }
+</style>
+
+<style type="text/css">
+@media print {
+      .gm-style .gmnoprint, .gmnoprint {
+              display:none
+              }
+}@media screen {
+    .gm-style .gmnoscreen, .gmnoscreen {
+        display:none
+        }}
+
+</style>
+
+
+
+<style type="text/css">
+
+.gm-style-pbc{
+    transition:opacity ease-in-out;
+    background-color:rgba(0,0,0,0.45);
+    text-align:center
+    }
+    .gm-style-pbt{
+        font-size:22px;
+        color:white;
+        font-family:Roboto,Arial,sans-serif;
+        position:relative;margin:0;
+        top:50%;
+        -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+        transform:translateY(-50%)}
+</style>
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'NewLogo.png' %}" type="favicon/ico" />
+
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'Home_files/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'Home_files/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Home_files/pe-icon-7-stroke.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'Home_files/plugins.css' %}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'Home_files/style.css' %}">
+    <!-- Modernizer JS -->
+
+
+<style>
+    .gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .gm-style img { max-width: none;
+          }
+</style>
+
+
+<script type="text/javascript" charset="UTF-8" src="{% static 'Home_files/onion.js.download' %}"></script>
+<script type="text/javascript" charset="UTF-8" src="{% static 'Home_files/stats.js.download' %}"></script>
+<script type="text/javascript" charset="UTF-8" src="{% static 'Home_files/controls.js.download' %}"></script>
+
+
+
+
+{% block head %}{% endblock %}
+
+
+<style media="screen">
+    .logo{
+        width:100px;
+    }
+
+    .header-logo{
+        position: relative;
+    }
+    .left-logo{
+        float: left;
+
+    }
+    .right-logo{
+        float: right;
+
+        margin-right: 0;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<!-- Main Wrapper -->
+
+        <div class="header-logo">
+            <img src="{% static 'Logo-Header.jpg' %}" width="100%" alt="">
+        </div>
+    <!-- Header Section Start -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Header Menu -->
+
+                    <nav id="menu" style="display: block;">
+                        <ul>
+                            <li class="{% block index-active %}{% endblock %}"><a href="{% url 'index' %}">Home</a></li>
+
+                            <li class="{% block Events-active %}{% endblock %}"><a href="{% url 'Events' %}">Event</a></li>
+
+                            <li class="{% block Registration-active %}{% endblock %}"><a href="{% url 'Registration' %}">Register</a></li>
+
+                            <li class=""><a href="{% url 'updatesoon' %}">Pages</a></li>
+
+                            <li class=""><a href="{% url 'updatesoon' %}">About</a></li>
+
+                            <li class=""><a href="{% url 'updatesoon' %}">Contact</a></li>
+
+                {% if user.is_authenticated %}
+
+                            <li class="{% block reg_info-active %}{% endblock %}"><a href="{% url 'reg_info' %}">Registration Info</a></li>
+                            <li class="{% block logout-active %}{% endblock %}"><a href="{% url 'logout' %}">Logout</a></li>
+
+                 {% else %}
+                            <li class="{% block login-active %}{% endblock %}"><a href="{% url 'login' %}">Login</a></li>
+
+                {% endif %}
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Header Section End -->
+
+{% block body %}
+
+    <div class="video-join-section section overlay-gradient overlay-opacity-70 pt-85 pb-100" style=" background-image: url({% static 'Lingayas_img1.jpg' %}); width: 100%;">
+        <div class="container">
+            <div class="row flex-row-reverse" >
+
+
+                <!-- Join Form Start -->
+                <div class="join-form col-xl-5 col-lg-6 col-12">
+
+
+
+                    <img src="{% static 'RadianceLogo.png' %}" width="550px" alt="">
+
+
+                </div><!-- Join Form End -->
+
+                <!-- Video Content Start -->
+                <div class="video-content col-xl-7 col-lg-6 col-12" >
+
+                    <h1>LINGAYA'S VIDYAPEETH <br> ZEST 2K18</h1>
+
+                    <a href="#" class="play-video video-popup"> <img src="{%  static 'Home_files/play-white.png' %}" alt="play"> <span>Teaser will be update soon</span> </a>
+
+                </div><!-- Video Content End -->
+                <div class="cta-content white text-center col-12">
+
+                    <a href="{% url 'Registration' %}" class="btn btn-light btn-hover-light-outline">Register</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- Video & Join Section End -->
+
+
+
+
+
+
+
+
+    <!-- About Section Start -->
+        <!-- Event Schedule Section Start -->
+    <div class="event-schedule-section event-schedule-section-one section pt-120 pb-120">
+        <div class="container">
+
+            <div class="row">
+                <div class="section-title-one text-center col pb-150">
+                    <h1>Event Schedule</h1>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Event One Tab List Start -->
+                <div class="col-12">
+                    <div class="event-one-schedule-tab-list nav">
+
+                        <a class="tab" data-toggle="tab" href="{% url 'index' %}#event-one-day-one"> <h3>day-01</h3> <span>Oct 26, 2018</span> </a>
+                        <a data-toggle="tab" href="{% url 'index' %}#event-one-day-two"> <h3>day-02</h3> <span>Oct 27, 2018</span> </a>
+                    </div>
+                </div><!-- Event One Tab List End -->
+
+                <!-- Event One Tab Content Start -->
+
+            </div>
+
+        </div>
+    </div><!-- Event Schedule Section End -->
+
+    <!-- Video & Join Section Start -->
+    <div class="video-join-section section overlay-gradient overlay-opacity-70 pt-85 pb-100" style="background-image: url(img/bg/video-join.jpg)">
+        <div class="container">
+            <div class="row flex-row-reverse">
+
+                <!-- Join Form Start -->
+                <div class="join-form col-xl-5 col-lg-6 col-12">
+
+
+
+                    <img src="{% static 'RadianceLogo.png' %}" width="550px" alt="">
+
+
+                </div><!-- Join Form End -->
+
+                <!-- Video Content Start -->
+                <div class="video-content col-xl-7 col-lg-6 col-12">
+
+                    <h1>Radiance</h1>
+                    <p>Radiance is the infectious feelings of hope, faith and love that people are left buzzing with after being inspired by something and because where there is hope there is also faith you are full of faith that you only have to do the thing because you are one hundred per cent equipped with the tools you need to do it. You were chosen to do the thing and love because if you are not lining in love, you are living in fear and if you are living in fear you have also lost your faith. </p>
+                    <a href="#" class="play-video video-popup"> <img src="{% static 'Home_files/play-white.png' %}" alt="play"> <span>Play Teaser</span> </a>
+
+                </div><!-- Video Content End -->
+
+            </div>
+        </div>
+    </div><!-- Video & Join Section End -->
+
+
+
+
+
+
+
+
+
+    <div class="pricing-section section bg-white pt-120 pb-90">
+        <div class=""    >
+
+            <!-- Section Title Style One -->
+            <div class="row"  style=" " >
+                <div class="section-title-one text-center col pb-70"  style=" " >
+                    <h1> Inauguration By</h1>
+
+                </div>
+            </div>
+
+                               <!-- About Image -->
+
+                               <!-- About Content -->
+                               <div class="about-content-one col-lg-6 col-12"  style=" background-color: black; height: 313.5px; padding: 0; margin: 0">
+                                   <br><br><br><br><br>
+                                   <h1 style="margin-left: 350px;">Aditya Pancholi</h1>
+                                   <h4 style="margin-left: 350px;">Film Actor</h4>
+
+                                   <!-- About Countdown -->
+                                   <div class="about-countdown" data-countdown="2019/01/01"></div>
+
+                               </div>
+                               <div class="about-image-one col-lg-6 col-12"  style=" background-color: black "  >
+                                   <img src="{% static 'Guest1.png' %}" width="557px" alt="about" style=" margin-left:50px ">
+                               </div>
+
+                           </div>
+                       </div>
+                   </div><!-- About Section End -->
+
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Pricing Section End -->
+
+    <!-- Funfact Section Start -->
+
+
+
+
+
+
+
+
+
+
+    <div class="pricing-section section bg-white pt-120 pb-90">
+        <div class=""    >
+
+            <!-- Section Title Style One -->
+            <div class="row"  style=" " >
+                <div class="section-title-one text-center col pb-70"  style=" " >
+                    <h1> Star Night By</h1>
+
+                </div>
+            </div>
+
+                               <!-- About Image -->
+                               <div class="about-image-one col-lg-6 col-12"  style=" background-color: black "  >
+                                   <img src="{% static 'StarNight.png' %}" width="400px" alt="about" style=" margin-left:50px ">
+                               </div>
+
+                               <!-- About Content -->
+                               <div class="about-content-one col-lg-6 col-12"  style=" background-color: black; height: 313.5px; padding: 0; margin: 0;">
+                                   <br><br><br><br><br>
+                                   <h1 style=" margin-left: 150px" >Hardy Sandhu</h1>
+                                   <h4 style=" margin-left: 150px">Singer</h4>
+
+                                   <!-- About Countdown -->
+                                   <div class="about-countdown" data-countdown="2019/01/01"></div>
+
+                               </div>
+
+                           </div>
+                       </div>
+                   </div><!-- About Section End -->
+
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Pricing Section End -->
+
+    <!-- Funfact Section Start -->
+
+
+    <!-- Gallery Section Start -->
+    <div class="gallery-section section pt-120 pb-90">
+        <div class="container">
+
+            <!-- Section Title Style One -->
+            <div class="row">
+                <div class="section-title-one text-center col pb-70">
+                    <h1>Our Gallery</h1>
+
+                </div>
+            </div>
+
+            <!-- Gallery Wrapper -->
+            <div class="gallery-wrapper row">
+
+                <!-- Single Gallery -->
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <a href="{% static 'Home_files/1(1).jpg' %}" class="single-gallery image-popup"><img src="{% static 'Home_files/1(1).jpg' %}" alt="gallery"> <div class="hover"></div></a>
+                </div>
+
+
+                <!-- Single Gallery -->
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <a href="{% static 'Home_files/1(1).jpg' %}" class="single-gallery image-popup"><img src="{% static 'Home_files/1(1).jpg' %}" alt="gallery"> <div class="hover"></div></a>
+                </div>
+
+
+                <!-- Single Gallery -->
+                <div class="col-lg-4 col-md-6 col-12 mb-30">
+                    <a href="{% static 'Home_files/1(1).jpg' %}" class="single-gallery image-popup"><img src="{% static 'Home_files/1(1).jpg' %}" alt="gallery"> <div class="hover"></div></a>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div><!-- Gallery Section End -->
+
+
+
+
+
+    <!-- Partners Section Start -->
+    <div class="partners-section section bg-light-gray pt-120 pb-90">
+        <div class="container">
+
+            <!-- Section Title Style One -->
+            <div class="row">
+                <div class="section-title-one text-center col pb-70">
+                    <h1>Eventpro Partners</h1>
+                    <p>Will be updated soon. </p>
+                </div>
+            </div>
+
+            <div class="row">
+
+
+                <!-- Partner Tab Content Start -->
+                <div class="partner-tab-content tab-content col-12">
+
+                    <!-- Partner Tab Pane Start -->
+                    <div class="partner-tab-pane text-center tab-pane fade show active" id="glod-sponsor">
+                        <div class="row">
+
+                            <div class="single-partner mb-30"><img src="./Home_files/1.png" alt="partners"></div>
+                            <div class="single-partner mb-30"><img src="./Home_files/2.png" alt="partners"></div>
+                            <div class="single-partner mb-30"><img src="./Home_files/3.png" alt="partners"></div>
+                            <div class="single-partner mb-30"><img src="./Home_files/4.png" alt="partners"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div><!-- Partners Section End -->
+
+{% endblock %}
+
+{% block ClassActive %} {% endblock %}
+{% block EventSchedule %}{% endblock %}
+    <!-- CTA Section Start -->
+    <div class="cta-section section overlay-blue overlay-opacity-70 pt-100 pb-110" style="background-image: url({% static 'registration.jpg' %}); height: 250px" >
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Event One Tab Content Start -->
+                    <div class="cta-content white text-center col-12">
+                        <h1>For Registration </h1>
+                        <h4>You can register from here.</h4>
+                        <a href="{% url 'Registration' %}" class="btn btn-light btn-hover-light-outline">Register</a>
+                    </div>
+
+                </div>
+            </div>
+
+    </div><!-- CTA Section End -->
+
+
+    <!-- Footer Top Section Start -->
+<div class="footer-top section bg-dark-gray pt-100 pb-60">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Widget Two -->
+            <div class="footer-widget-2 col-xl-3 col-md-6 col-12 mb-40">
+
+                <h3 class="widget-title">Address</h3>
+
+                <span class="glyphicon glyphicon-map-marker"> <p> Lingaya's Vidyapeeth, Nachauli, Jasana Road,Old Faridabad, Haryana </p> </span>
+                <span class="glyphicon glyphicon-earphone"> <p> +91-129-2598200/05, <br> Toll Free: 1800-120-4613, +91-11-40719000 </p> </span>
+                <span class="glyphicon glyphicon-envelope"> <p> lu@lingayasuniversity.edu.in </p> </span>
+
+            </div>
+
+            <div class="footer-widget-2 col-xl-2 ml-auto col-md-6 col-12 mb-40">
+
+                <h3 class="widget-title">Related Links</h3>
+
+                <ul>
+                    <li><a href="{% url 'Events' %}">Event Schedule</a></li>
+                    <li><a href="{% url 'updatesoon' %}">Event Support</a></li>
+                    <li><a href="{% url 'updatesoon' %}">Guest</a></li>
+                    <li><a href="{% url 'updatesoon' %}">Contact</a></li>
+                    <li><a href="{% url 'updatesoon' %}">About</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Footer Widget Two -->
+            <div class="footer-widget-2 col-xl-2 ml-auto col-md-6 col-12 mb-40">
+
+                <h3 class="widget-title">Categories</h3>
+
+                <ul>
+
+                    <li><a href="{% url 'updatesoon' %}">Update Soon</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Footer Widget Two -->
+            <div class="footer-widget-2 col-xl-3 col-md-6 col-12 mb-40">
+
+                <h3 class="widget-title">Recent Updates</h3>
+
+                <ul class="recent-twitter">
+                    {% block updateEvents %}{% endblock %}
+                    <li>Will be update soon.</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer Top Section End -->
+    <!-- Footer Top Section End -->
+
+    <!-- Footer Bottom Section Start -->
+    <div class="footer-bottom section bg-black">
+        <div class="container">
+            <div class="row">
+
+                <!-- Copyright Text -->
+                <div class="copyright text-center col-12">
+
+                    <p>Lingaya's Vidyapeeth @ Zest 2018</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom Section End -->
+
+</div>
+
+
+<!-- JS
+============================================ -->
+
+<!-- jQuery JS -->
+<script src="./Home_files/jquery-1.12.0.min.js.download"></script>
+<!-- Popper JS -->
+<script src="./Home_files/popper.min.js.download"></script>
+<!-- Bootstrap JS -->
+<script src="./Home_files/bootstrap.min.js.download"></script>
+<!-- Plugins JS -->
+<script src="./Home_files/plugins.js.download"></script>
+<!-- HoverDir JS -->
+<script src="./Home_files/jquery.hoverdir.js.download"></script>
+<!-- Ajax Mail JS -->
+<script src="./Home_files/ajax-mail.js.download"></script>
+<!-- Main JS -->
+<script src="./Home_files/main.js.download"></script><a id="scrollUp" href="#" style="position: fixed; z-index: 2147483647; display: none;"><i class="fa fa-angle-up"></i></a>
+<!-- Google Map Api -->
+<script src="./Home_files/js"></script>
+<!-- Google Map Activation -->
+<script src="./Home_files/map-one.js.download"></script>
+
+
+
+</body></html>

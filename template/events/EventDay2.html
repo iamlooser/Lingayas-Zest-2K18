@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Events Schedule Day 02 {% endblock %}
+
+{% block Events-active %} active {% endblock %}
+
+{% block body %}
+
+
+
+
+
+
+
+
+<div class="event-schedule-section event-schedule-section-one section pt-120 pb-120">
+    <div class="container">
+
+        <!-- Section Title Style One -->
+        <div class="row">
+            <div class="section-title-one text-center col pb-150">
+                <h1>Event Schedule</h1>
+                <p> Zest 2k18 </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <!-- Event One Tab List Start -->
+            <div class="col-12">
+                <div class="event-one-schedule-tab-list nav">
+
+                    <a class="" data-toggle="tab" href="{% url 'Events' %}"> <h3>day-01</h3> <span>Oct 26, 2018</span> </a>
+                    <a class="active" data-toggle="tab" href="{% url 'DayTwo' %}"> <h3>day-02</h3> <span>Oct 27, 2018</span> </a>
+
+
+                </div>
+            </div><!-- Event One Tab List End -->
+
+            <!-- Event One Tab Content Start -->
+            <div class="event-one-schedule-tab-content tab-content col-12">
+
+                <!-- Event One Tab Pane Start -->
+                <div class="event-one-schedule-tab-pane tab-pane fade show active" id="event-one-day-one">
+
+                    <!-- Event One List Start-->
+                    <ul class="event-one-schedule-list">
+
+
+
+                        <!-- Event One Single Event Start-->
+                        <li class="event-one-single-schedule">
+
+                                        <!-- Day & Time -->
+                                        <div class="day-time float-left">
+                                            <h5>Friday</h5>
+                                            <h4>09:00 am</h4>
+                                        </div>
+
+                                        <!-- Category & Title -->
+                                        <div class="category-title float-left">
+                                            <h5><a href="##">Event</a></h5>
+                                            <h4><a href="#">Starting of Zest</a></h4>
+                                        </div>
+
+                                        <!-- Organizer -->
+                                        <div class="organizer float-left">
+                                            <h5>At Main Building</h5>
+                                            <h4><a href="#"> Auditorium</a></h4>
+                                        </div>
+
+                        </li><!-- Event One Single Event End-->
+
+
+
+
+
+                        <!-- Event One Single Event Start-->
+                        <li class="event-one-single-schedule">
+
+                                        <!-- Day & Time -->
+                                        <div class="day-time float-left">
+                                            <h5>Saturday</h5>
+                                            <h4>09:30 am</h4>
+                                        </div>
+
+                                        <!-- Category & Title -->
+                                        <div class="category-title float-left">
+                                            <h5><a href="#">Event</a></h5>
+                                            <h4><a href="#">Dance</a></h4>
+                                        </div>
+
+                                        <!-- Organizer -->
+                                        <div class="organizer float-left">
+                                            <h5>At Main Building</h5>
+                                            <h4><a href="#"> Auditorium</a></h4>
+                                        </div>
+
+                        </li><!-- Event One Single Event End-->
+
+
+
+
+                    
+
+                    </ul><!-- Event One List End-->
+
+                </div><!-- Event One Tab Pane End -->
+
+            </div><!-- Event One Tab Content End -->
+
+        </div>
+
+    </div>
+</div><!-- Event Schedule Section End -->
+
+
+
+
+ {% endblock %}

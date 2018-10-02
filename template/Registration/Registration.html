@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Event Registration {% endblock %}
+{% block Registration-active %} active {% endblock %}
+{% block head %}
+
+<style media="screen">
+    .full-part{
+        background-image: url({% static 'registrationImg.jpg' %});
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        text-align: center;
+    }
+    .Heading-part {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.68);
+        color: white;
+    }
+    .Heading-par h1{
+        margin: 10px;
+        color: white;
+    }
+    .inner-part{
+        width: 100%;
+        display: inline-block;
+        text-align:c
+    }
+
+
+
+
+
+    .form-part{
+        width: auto;
+        margin-left: -15%;
+        text-align: center;
+        display: inline-block;
+    }
+    .form-part p{
+
+        text-align: left;
+        width: 300px;
+
+        font-size: 20px;
+
+    }
+    .form-part input{
+        text-align: none;
+    }
+    .form-part button{
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        background-color: rgb(0, 0, 0);
+        height: 50px;
+        width: 300px;
+        border-radius: 20px;
+        color: white;
+        margin-left: 30%;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<div class="full-part">
+
+            <div class="inner-part">
+                        <div class="Heading-part"><br><br>
+                            <h1 style=" color: white ">Registration</h1>
+                            <p> Zest 2K18 </p><br>
+                            <p>*After submitting the Registration Form. If you got same page means " Your registration is not Done ". Please go and register with correct information. </p><br>
+
+                        </div>
+
+<br>
+                    <div class=" form-part">
+                        <form method="post">
+                            <br><br>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <h5 style=" text-align:center;  "> </h5><br>
+                            <button type="submit">Register</button>
+                        </form>
+
+                    </div>
+
+
+<br>
+
+</div>
+
+
+
+
+</div>
+
+
+ {% endblock %}
